@@ -5,82 +5,41 @@ import { useRef, useEffect, useState } from 'react';
 import { FiTrendingUp, FiEye, FiZap } from 'react-icons/fi';
 import { HiShieldCheck } from 'react-icons/hi2';
 
-function Counter({ value, decimal = 0, suffix = '' }: { value: number; decimal?: number; suffix?: string }) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: '-50px' });
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        if (!isInView) return;
-
-        let start = 0;
-        const end = value;
-        const duration = 2000;
-        const startTime = performance.now();
-
-        const updateCounter = (now: number) => {
-            const timeElapsed = now - startTime;
-            const progress = Math.min(timeElapsed / duration, 1);
-            const current = start + (end - start) * (1 - (1 - progress) * (1 - progress));
-            setCount(current);
-
-            if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-            }
-        };
-
-        requestAnimationFrame(updateCounter);
-    }, [isInView, value]);
-
-    return (
-        <span ref={ref}>
-            {decimal > 0 ? count.toFixed(decimal) : Math.round(count)}
-            {suffix}
-        </span>
-    );
-}
+// Counter component removed as we are no longer using fake numbers
 
 export default function Stats() {
     const statsList = [
         {
-            numericValue: 38,
-            decimal: 0,
-            suffix: '%',
-            title: 'Throughput Increase',
-            description: 'Average gain in daily finished garment units across active lines.',
+            highlightText: 'Automate',
+            title: 'Production Workflows',
+            description: 'Manage production workflows and monitor production progress effortlessly.',
             icon: FiTrendingUp,
             color: 'text-purple-600 bg-purple-50 border-purple-100',
-            badge: '+38% vs Manual Lines'
+            badge: 'Operational Efficiency'
         },
         {
-            numericValue: 64,
-            decimal: 0,
-            suffix: '%',
-            title: 'Defect Rate Reduction',
-            description: 'Fewer stitching flaws & material rejections caught in real-time.',
+            highlightText: 'Track',
+            title: 'Inventory & Materials',
+            description: 'Track materials, stock levels, and inventory movements in real-time.',
             icon: HiShieldCheck,
             color: 'text-emerald-600 bg-emerald-50 border-emerald-100',
-            badge: 'Zero-Defect Standard'
+            badge: 'Centralized Control'
         },
         {
-            numericValue: 99.9,
-            decimal: 1,
-            suffix: '%',
-            title: 'Real-Time Visibility',
-            description: 'Uptime coverage across floor stations, shifts, and workstations.',
+            highlightText: 'Manage',
+            title: 'Workforce & Attendance',
+            description: 'Manage employee information, track attendance, and assign tasks easily.',
             icon: FiEye,
             color: 'text-indigo-600 bg-indigo-50 border-indigo-100',
-            badge: 'Live Shop Floor Sync'
+            badge: 'Better Accountability'
         },
         {
-            numericValue: 4.2,
-            decimal: 1,
-            suffix: 'x',
-            title: 'Faster Batch Setup',
-            description: 'Accelerated style onboarding & operator layout configuration.',
+            highlightText: 'Analyze',
+            title: 'Reports & Insights',
+            description: 'View operational insights and make better data-driven business decisions.',
             icon: FiZap,
             color: 'text-fuchsia-600 bg-fuchsia-50 border-fuchsia-100',
-            badge: 'Instant Shift Start'
+            badge: 'Data-Driven Decisions'
         }
     ];
 
@@ -134,9 +93,9 @@ export default function Stats() {
                                     </span>
                                 </div>
 
-                                {/* Animated Stat Counter */}
-                                <div className="text-4xl sm:text-5xl font-extrabold text-slate-950 tracking-tight mb-2 group-hover:text-purple-700 transition-colors">
-                                    <Counter value={stat.numericValue} decimal={stat.decimal} suffix={stat.suffix} />
+                                {/* Highlight Text */}
+                                <div className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mb-2 group-hover:text-purple-700 transition-colors">
+                                    <span>{stat.highlightText}</span>
                                 </div>
 
                                 <h3 className="text-base font-bold text-slate-900 mb-2">

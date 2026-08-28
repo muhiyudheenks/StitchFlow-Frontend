@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 export default function TrustedCompanies() {
     const companies = [
-        { name: 'Apex Threads', symbol: '✦', location: 'Milan' },
-        { name: 'Precision Loom', symbol: '❖', location: 'Tokyo' },
-        { name: 'Vanguard Apparel', symbol: '▲', location: 'New York' },
-        { name: 'SilkRoute Mfg', symbol: '⬡', location: 'Istanbul' },
-        { name: 'CoreTextile', symbol: '⚙', location: 'London' },
-        { name: 'Zenith Garments', symbol: '⚡', location: 'Dhaka' },
-        { name: 'Nexus Stitch', symbol: '◈', location: 'Seoul' },
-        { name: 'Solis Mills', symbol: '✵', location: 'Saigon' },
+        { name: 'Production', symbol: '⚙', location: 'Management' },
+        { name: 'Inventory', symbol: '❖', location: 'Tracking' },
+        { name: 'Employee', symbol: '▲', location: 'Management' },
+        { name: 'Attendance', symbol: '⬡', location: 'Tracking' },
+        { name: 'Tasks', symbol: '✦', location: 'Management' },
+        { name: 'Reports', symbol: '⚡', location: 'Analytics' },
+        { name: 'Quality', symbol: '◈', location: 'Control' },
+        { name: 'Workflow', symbol: '✵', location: 'Automation' },
     ];
 
     const doubleCompanies = [...companies, ...companies];
@@ -29,7 +29,7 @@ export default function TrustedCompanies() {
                     transition={{ duration: 0.5 }}
                     className="text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-10"
                 >
-                    Trusted by forward-thinking apparel & textile enterprises worldwide
+                    Core capabilities driving manufacturing excellence
                 </motion.p>
 
                 {/* Marquee Wrapper with Edge Blurs */}

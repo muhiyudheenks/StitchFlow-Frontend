@@ -143,7 +143,7 @@ export default function Hero() {
                             </div>
                             <div>
                                 <h4 className="text-[12px] font-bold text-slate-800">Shift Roster</h4>
-                                <p className="text-[10px] text-slate-500">124 Floor Workers Active</p>
+                                <p className="text-[10px] text-slate-500">Shift Roster Active</p>
                             </div>
                         </div>
                         <div className="mt-3 flex items-center justify-between text-[10px] border-t border-slate-100 pt-2 text-slate-500">
@@ -166,9 +166,9 @@ export default function Hero() {
                                 </div>
                                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Line Efficiency</span>
                             </div>
-                            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">+8.2%</span>
+                            <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">Optimal</span>
                         </div>
-                        <div className="text-lg font-extrabold text-slate-850">96.4 pcs / hr</div>
+                        <div className="text-lg font-extrabold text-slate-850">Tracking Active</div>
                     </motion.div>
 
                     {/* 3. Attendance Status Widget (Bottom Left) */}
@@ -184,7 +184,7 @@ export default function Hero() {
                                     <circle cx="20" cy="20" r="16" className="text-slate-100" strokeWidth="3.5" stroke="currentColor" fill="transparent" />
                                     <circle cx="20" cy="20" r="16" className="text-purple-600" strokeWidth="3.5" strokeDasharray={2 * Math.PI * 16} strokeDashoffset={2 * Math.PI * 16 * (1 - 0.95)} strokeLinecap="round" stroke="currentColor" fill="transparent" />
                                 </svg>
-                                <span className="absolute text-[9px] font-extrabold text-slate-850">95%</span>
+                                <span className="absolute text-[9px] font-extrabold text-slate-850">Active</span>
                             </div>
                             <div>
                                 <h4 className="text-[11px] font-bold text-slate-850">Attendance</h4>
@@ -207,7 +207,7 @@ export default function Hero() {
                         <div className="space-y-1.5">
                             <div className="flex items-center justify-between text-[10px]">
                                 <span className="text-slate-500">Available Reels</span>
-                                <span className="text-slate-800 font-bold">14,250 / 15k</span>
+                                <span className="text-slate-800 font-bold">Sufficient Levels</span>
                             </div>
                             <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
                                 <div className="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style={{ width: '95%' }} />
@@ -237,7 +237,7 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
                         <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mb-1">Batch Progress</div>
-                        <div className="text-[12px] font-bold text-slate-800 mb-2">99.2% Completed</div>
+                        <div className="text-[12px] font-bold text-slate-800 mb-2">Batch in Progress</div>
                         <div className="h-4 w-full flex items-end gap-1">
                             <div className="bg-slate-200 w-full h-[40%] rounded-sm" />
                             <div className="bg-slate-200 w-full h-[60%] rounded-sm" />

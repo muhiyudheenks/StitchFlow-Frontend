@@ -2,7 +2,6 @@
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustedCompanies from './components/TrustedCompanies';
 import Features from './components/Features';
 import WhyChoose from './components/WhyChoose';
 import Stats from './components/Stats';
@@ -14,7 +13,6 @@ export default function LandingPage() {
         <div className="bg-[#FAFAFC] min-h-screen text-slate-900 font-sans overflow-x-hidden antialiased selection:bg-primary/30 selection:text-white">
             <Navbar />
             <Hero />
-            <TrustedCompanies />
             <Features />
             <WhyChoose />
             <Stats />

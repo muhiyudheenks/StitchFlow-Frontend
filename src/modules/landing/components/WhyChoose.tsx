@@ -7,17 +7,17 @@ import { TbCalendarCheck, TbFileSpreadsheet } from 'react-icons/tb';
 
 export default function WhyChoose() {
     const modules = [
-        { id: 'emp', name: 'Employees', icon: FiUsers, label: '340 Active Workers', color: 'from-purple-500/20 to-indigo-500/20 border-purple-300 text-purple-300', x: '5%', y: '5%' },
-        { id: 'prd', name: 'Products', icon: FiLayers, label: '14 Active Styles', color: 'from-violet-500/20 to-pink-500/20 border-violet-300 text-violet-300', x: '60%', y: '5%' },
-        { id: 'pro', name: 'Production', icon: FiActivity, label: '98.4% Efficiency', color: 'from-emerald-500/20 to-teal-500/20 border-emerald-300 text-emerald-300', x: '35%', y: '40%' },
-        { id: 'att', name: 'Attendance', icon: TbCalendarCheck, label: '99.2% Clocked In', color: 'from-amber-500/20 to-orange-500/20 border-amber-300 text-amber-300', x: '5%', y: '72%' },
+        { id: 'emp', name: 'Employees', icon: FiUsers, label: 'Manage Workforce', color: 'from-purple-500/20 to-indigo-500/20 border-purple-300 text-purple-300', x: '5%', y: '5%' },
+        { id: 'prd', name: 'Products', icon: FiLayers, label: 'Track Products', color: 'from-violet-500/20 to-pink-500/20 border-violet-300 text-violet-300', x: '60%', y: '5%' },
+        { id: 'pro', name: 'Production', icon: FiActivity, label: 'Monitor Operations', color: 'from-emerald-500/20 to-teal-500/20 border-emerald-300 text-emerald-300', x: '35%', y: '40%' },
+        { id: 'att', name: 'Attendance', icon: TbCalendarCheck, label: 'Track Attendance', color: 'from-amber-500/20 to-orange-500/20 border-amber-300 text-amber-300', x: '5%', y: '72%' },
         { id: 'rep', name: 'Reports', icon: TbFileSpreadsheet, label: 'Real-Time Audits', color: 'from-blue-500/20 to-indigo-500/20 border-blue-300 text-blue-300', x: '65%', y: '72%' },
         { id: 'inv', name: 'Inventory', icon: FiBox, label: 'Fabric Stock Synced', color: 'from-fuchsia-500/20 to-pink-500/20 border-fuchsia-300 text-fuchsia-300', x: '72%', y: '38%' },
     ];
 
     const benefits = [
         'Complete end-to-end operational transparency across floors',
-        '35%+ reduction in idle machine time & assembly bottlenecks',
+        'Reduce idle machine time & assembly bottlenecks',
         'Instant audit readiness with zero manual paperwork',
         'Seamless integration for line supervisors, workers, and executives'
     ];

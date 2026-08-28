@@ -84,7 +84,7 @@ export default function Features() {
                                 </div>
                                 <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
                                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                                    OPTIMIZED • 98.4%
+                                    OPTIMIZED • ACTIVE
                                 </span>
                             </div>
 
@@ -93,9 +93,9 @@ export default function Features() {
                                 {/* Line Workstations Nodes Graphic */}
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                                     {[
-                                        { station: 'Station #01 - Cutting', rate: '142 pcs/hr', status: 'Optimal', color: 'text-emerald-600 bg-emerald-50 border-emerald-200' },
-                                        { station: 'Station #02 - Collar Stitch', rate: '128 pcs/hr', status: 'Active', color: 'text-purple-600 bg-purple-50 border-purple-200' },
-                                        { station: 'Station #03 - Sleeve Join', rate: '135 pcs/hr', status: 'Balanced', color: 'text-indigo-600 bg-indigo-50 border-indigo-200' }
+                                        { station: 'Station #01 - Cutting', rate: 'Monitored', status: 'Optimal', color: 'text-emerald-600 bg-emerald-50 border-emerald-200' },
+                                        { station: 'Station #02 - Collar Stitch', rate: 'Tracking', status: 'Active', color: 'text-purple-600 bg-purple-50 border-purple-200' },
+                                        { station: 'Station #03 - Sleeve Join', rate: 'Active', status: 'Balanced', color: 'text-indigo-600 bg-indigo-50 border-indigo-200' }
                                     ].map((node, i) => (
                                         <div key={i} className="p-4 rounded-2xl bg-slate-50/80 border border-slate-100 hover:bg-white hover:shadow-md transition-all duration-300">
                                             <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{node.station}</div>
@@ -114,7 +114,7 @@ export default function Features() {
                                             <FiCpu size={16} className="text-purple-400" />
                                             <span className="text-xs font-bold text-slate-200">Auto-Balancing Engine</span>
                                         </div>
-                                        <span className="text-xs font-bold text-purple-300">Tact Time: 42s</span>
+                                        <span className="text-xs font-bold text-purple-300">Auto-Balancing Active</span>
                                     </div>
 
                                     {/* Animated Progress Bar */}
@@ -128,8 +128,8 @@ export default function Features() {
 
                                     <div className="mt-3 flex justify-between text-[11px] text-slate-300 font-mono relative z-10">
                                         <span>Batch #GAR-8092</span>
-                                        <span>Target: 2,400 units</span>
-                                        <span className="text-emerald-400 font-bold">+14% vs Shift Baseline</span>
+                                        <span>Batch Target Monitored</span>
+                                        <span className="text-emerald-400 font-bold">Efficiency Optimized</span>
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +265,7 @@ export default function Features() {
                                     </span>
                                 </div>
                                 <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-full border border-purple-200/60">
-                                    DEFECT RATE: 0.42%
+                                    QUALITY TRACKING ACTIVE
                                 </span>
                             </div>
 
@@ -278,8 +278,8 @@ export default function Features() {
                                             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Pass Rate Yield</span>
                                             <FiBarChart2 size={16} className="text-emerald-400" />
                                         </div>
-                                        <div className="text-3xl font-extrabold text-white tracking-tight">99.58%</div>
-                                        <p className="text-xs text-slate-400 mt-1">2,840 inspected / 12 flagged</p>
+                                        <div className="text-2xl font-extrabold text-white tracking-tight">Pass Rate Monitored</div>
+                                        <p className="text-xs text-slate-400 mt-1">Inspection Logs Active</p>
                                     </div>
                                     <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-300">
                                         <span>Lot #DF-9921</span>
@@ -293,9 +293,9 @@ export default function Features() {
                                         <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Top Inspection Audit Logs</div>
 
                                         {[
-                                            { defect: 'Seam Puckering', count: '4 cases', severity: 'Low' },
-                                            { defect: 'Missing Thread Lock', count: '2 cases', severity: 'Medium' },
-                                            { defect: 'Fabric Misalignment', count: '1 case', severity: 'Resolved' }
+                                            { defect: 'Seam Puckering', count: 'Logged', severity: 'Low' },
+                                            { defect: 'Missing Thread Lock', count: 'Logged', severity: 'Medium' },
+                                            { defect: 'Fabric Misalignment', count: 'Resolved', severity: 'Resolved' }
                                         ].map((item, i) => (
                                             <div key={i} className="flex justify-between items-center text-xs p-2.5 rounded-lg bg-white border border-slate-100">
                                                 <span className="font-semibold text-slate-800">{item.defect}</span>

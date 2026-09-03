@@ -31,8 +31,8 @@ export default function EmployeesTab() {
 
     const filtered = employees.filter((emp) => {
         const matchesSearch =
-            emp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            emp.email.toLowerCase().includes(searchTerm.toLowerCase());
+            emp.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            emp.email?.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesDept = departmentFilter === 'all' || emp.department === departmentFilter;
         return matchesSearch && matchesDept;
     });
@@ -79,8 +79,8 @@ export default function EmployeesTab() {
                             key={dept}
                             onClick={() => setDepartmentFilter(dept)}
                             className={`px-3 py-1.5 rounded-xl text-xs font-bold capitalize transition-all cursor-pointer ${departmentFilter === dept
-                                    ? 'bg-slate-900 dark:bg-indigo-600 text-white shadow-sm'
-                                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                                ? 'bg-slate-900 dark:bg-indigo-600 text-white shadow-sm'
+                                : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                                 }`}
                         >
                             {dept}
@@ -135,8 +135,8 @@ export default function EmployeesTab() {
                                         <td className="py-4 px-6">
                                             <span
                                                 className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold ${emp.status === 'active'
-                                                        ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900/50'
-                                                        : 'bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-900/50'
+                                                    ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900/50'
+                                                    : 'bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-900/50'
                                                     }`}
                                             >
                                                 <FiCheckCircle size={12} /> {emp.status.toUpperCase()}

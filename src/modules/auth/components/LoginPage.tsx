@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { FiUser, FiLock, FiEye, FiEyeOff, FiCheckCircle, FiLayers } from 'react-icons/fi';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { authRequestFailed, otpRequired } from '../store/authSlice';
+import { authRequestFailed, otpRequired, signInSucceeded } from '../store/authSlice';
 import { useLogin } from '../hooks/auth-hooks';
 import { LoginPageValues, LoginSchema } from '../validations/authSchema';
 import { saveOtpContext } from '@/shared/utils/save-local';
@@ -291,20 +291,35 @@ export default function LoginPage() {
                                 width="100%"
                                 onSuccess={async (credentialResponse) => {
                                     try {
-                                        const response = await api.post("/auth/google-login", {
+                                        if (!credentialResponse.credential) {
+                                            throw new Error('Google authentication failed.');
+                                        }
+
+                                        const response = await api.post("/api/auth/google-login", {
                                             credential: credentialResponse.credential,
                                         });
 
-                                        // ഇവിടെ നിങ്ങളുടെ redux login action
-                                        // dispatch(signInSucceeded(response.data));
+                                        const user = response.data.user;
+                                        localStorage.setItem('token', response.data.token);
+                                        localStorage.setItem('user', JSON.stringify(user));
+                                        dispatch(signInSucceeded(user));
 
                                         router.push("/dashboard");
                                     } catch (err) {
-                                        console.log(err);
+                                        const axiosError = err as AxiosError<ApiError>;
+                                        const message = axiosError.response?.data?.message;
+                                        const safeMessage = message ===
+                                            'This email is not registered in StitchFlow. Please contact the administrator.'
+                                            ? message
+                                            : message ===
+                                                'Your StitchFlow account is inactive. Please contact the administrator.'
+                                                ? message
+                                                : 'Google sign-in failed. Please try again.';
+                                        dispatch(authRequestFailed(safeMessage));
                                     }
                                 }}
                                 onError={() => {
-                                    console.log("Google Login Failed");
+                                    dispatch(authRequestFailed('Google sign-in failed. Please try again.'));
                                 }}
                             />
                         </form>

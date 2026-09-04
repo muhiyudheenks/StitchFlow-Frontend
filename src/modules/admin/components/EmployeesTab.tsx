@@ -480,7 +480,7 @@ export default function EmployeesTab({ onOpenQuickAction }: EmployeesTabProps) {
                                                         <FiTrash2 size={14} />
                                                     </button>
                                                     {/* Show Resend Link for: unverified employees OR stuck employees (verified but never set password) */}
-                                                    {(!emp.isVerified || (emp.isVerified && !emp.setupPasswordExpire)) && (
+                                                    {!emp.isVerified && (
                                                         <button
                                                             onClick={() => handleResendSetupLink(emp.id)}
                                                             disabled={resendingId === emp.id}

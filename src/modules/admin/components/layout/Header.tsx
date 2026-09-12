@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { AdminTab } from '../types';
+import { AdminTab } from '../../types';
 import {
     FiSearch,
     FiBell,

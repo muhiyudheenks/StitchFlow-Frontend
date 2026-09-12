@@ -2,16 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Sidebar from './Sidebar';
-import Header from './Header';
-import OverviewTab from './OverviewTab';
-import EmployeesTab from './EmployeesTab';
-import ManagersTab from './ManagersTab';
-import SupportTicketsTab from './SupportTicketsTab';
-import AnalyticsTab from './AnalyticsTab';
-import ReportsTab from './ReportsTab';
-import SettingsTab from './SettingsTab';
-import QuickActionModal from './QuickActionModal';
+import Sidebar from './layout/Sidebar';
+import Header from './layout/Header';
+import OverviewTab from './tabs/OverviewTab';
+import EmployeesTab from './tabs/EmployeesTab';
+import ManagersTab from './tabs/ManagersTab';
+import SupportTicketsTab from './tabs/SupportTicketsTab';
+import AnalyticsTab from './tabs/AnalyticsTab';
+import ReportsTab from './tabs/ReportsTab';
+import SettingsTab from './tabs/SettingsTab';
+import QuickActionModal from './modals/QuickActionModal';
 import { AdminTab } from '../types';
 import { useOverviewCards } from '../hooks/useOverviewCards';
 import { AdminProductionTab as ProductionTab } from '@/modules/production';

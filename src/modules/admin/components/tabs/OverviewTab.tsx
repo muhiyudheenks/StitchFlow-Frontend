@@ -17,7 +17,7 @@ import {
     FiActivity
 } from 'react-icons/fi';
 
-import { OverviewCardsData } from '../types';
+import { OverviewCardsData } from '../../types';
 
 interface OverviewTabProps {
     onOpenQuickAction: (actionType: string) => void;

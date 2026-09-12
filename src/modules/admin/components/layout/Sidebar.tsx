@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { navItems } from '../constants';
-import { AdminTab, OverviewCardsData } from '../types';
+import { navItems } from '../../constants';
+import { AdminTab, OverviewCardsData } from '../../types';
 import Image from 'next/image';
 import { FiLayers, FiChevronLeft, FiChevronRight, FiLogOut, FiX } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';

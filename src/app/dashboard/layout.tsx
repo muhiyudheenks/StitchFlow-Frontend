@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         // Wait until pathname is available
         if (!pathname) return;
 
-        const parts = pathname.split('/').filter(Boolean); // ['dashboard', 'manager', ...]
+        const parts = pathname.split('/').filter(Boolean);
         const roleSegment = parts[1];
 
         // If user not in redux yet, check localStorage to avoid premature redirect

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Employee } from '../types';
+import { Employee } from '../../types';
 import {
     FiSearch,
     FiPlus,
@@ -17,7 +17,7 @@ import {
     FiTrash2,
     FiX
 } from 'react-icons/fi';
-import { useEmployees } from '../hooks/useEmployees';
+import { useEmployees } from '../../hooks/useEmployees';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import api from '@/config';
 
